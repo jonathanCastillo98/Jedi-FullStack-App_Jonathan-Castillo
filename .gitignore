@@ -1,0 +1,4 @@
+/Server/node_modules/
+/Server/dist/
+# The .env file is not ignored in order for you to know how to create the database, but it must be ignored.
+# *.env
