@@ -36,7 +36,7 @@ const jediController = {
         try {
             const jedis = await User.findAll();
 
-            if (jedis.length <= 1) {
+            if (jedis.length < 1) {
                 return res.status(404).json({ error: "The jedi list is empty!" })
             }
 

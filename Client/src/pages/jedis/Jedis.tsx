@@ -1,9 +1,10 @@
+import './index.css'
+
 import { useCallback, useEffect, useState } from "react"
 import JediCard from "./components/JediCard/JediCard";
 
 import Button from '@mui/material/Button';
 import { ModalCreate } from "../../components/modalCreate";
-
 
 const Jedis = () => {
 
@@ -35,6 +36,8 @@ const Jedis = () => {
             saberColor={jedi.lightSaberColor}
             battleStyle={jedi.battleStyle}
             isApprentice={jedi.isApprentice}
+            onRefresh={getList}
+
         />)
 
     const handleOnCreateBttn = (e: any) => {
@@ -48,11 +51,29 @@ const Jedis = () => {
     }
     return (
         <>
-            <div>Jedis</div>
-            <div>
-                {jediList}
+            <div className='Container'>
+                <h1>This is our army!</h1>
+                <header>
+                    <Button
+                        className='AddJedi'
+                        style={{ fontSize: "1.1rem", color: "black", fontFamily: "Open sans" }}
+                        onClick={handleOnCreateBttn}>
+                        Create a Jedi
+                    </Button>
+                </header>
+                {jediList ? <main>
+                    <div className='ListItemsHeader'>
+                        <p>Name</p>
+                        <p>Saber Color</p>
+                        <p>Battle Style</p>
+                        <p>Apprentice</p>
+                        <p>Update / Delete</p>
+                    </div>
+                    {jediList && <div>{jediList}</div>}
+                </main> :
+                    <h1>Empty List</h1>
+                }
             </div>
-            <Button onClick={handleOnCreateBttn} style={{ color: "black", border: "1px solid black", width: "30vw" }}>Create a Jedi</Button>
             <ModalCreate isModalActive={isModalActive} handleOnClick={handleOnClose} setIsModalActive={setIsModalActive} onRefresh={getList} />
 
         </>

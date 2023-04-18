@@ -1,0 +1,61 @@
+.Container {
+    width: 85vw;
+    height: 55vh;
+}
+
+.AddJedi {
+    box-shadow: 4px 4px 8px #202020;
+    font-family: 'Open sans';
+    border-radius: 8px;
+    width: 99.5%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Container>main {
+    margin-top: 2rem;
+    width: 100%;
+    height: 84%;
+    overflow-y: scroll;
+}
+
+.ListItemsHeader {
+    width: 80vw;
+    height: 3vh;
+    display: flex;
+    margin: 1vh;
+    margin-bottom: 0;
+    color: #241e1e;
+    font-family: 'Open sans';
+    padding: 4px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-weight: 700;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.ListItemsHeader>p {
+    width: calc(100%/5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.ListItemsHeader>p:nth-child(2) {
+    justify-content: center;
+}
+
+.ListItemsHeader>p:nth-child(3) {
+    justify-content: center;
+}
+
+.ListItemsHeader>p:nth-child(4) {
+    justify-content: center;
+}
+
+.ListItemsHeader>p:nth-child(5) {
+    justify-content: right;
+}
