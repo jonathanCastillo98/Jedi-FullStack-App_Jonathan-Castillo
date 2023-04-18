@@ -3,7 +3,7 @@ import Modal from '@mui/material/Modal';
 
 import { useForm } from 'react-hook-form';
 
-import './index.css';
+import './indexUpdate.css';
 import { useEffect, useState } from 'react';
 
 type Props = {

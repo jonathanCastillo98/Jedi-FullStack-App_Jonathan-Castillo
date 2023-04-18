@@ -1,0 +1,9 @@
+.TitlePrincipal {
+    text-shadow: 0 0 5px #e0ddd7,
+        0 0 15px #3d114b,
+        0 0 20px #9e499bca,
+        0 0 10px #733d7bc7,
+        0 0 90px #e094f7d0;
+    font-size: 3rem;
+    color: #ececea;
+}

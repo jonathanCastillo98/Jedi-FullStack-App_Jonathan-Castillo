@@ -52,11 +52,11 @@ const Jedis = () => {
     return (
         <>
             <div className='Container'>
-                <h1>This is our army!</h1>
+                <h1 className='jediTitle'>This is our army!</h1>
                 <header>
                     <Button
                         className='AddJedi'
-                        style={{ fontSize: "1.1rem", color: "black", fontFamily: "Open sans" }}
+                        style={{ fontSize: "1.1rem", backgroundColor: "#ff2301", color: "#fff6a9", boxShadow: "0 0 20px #ff2301,  0 0 20px #ff2301", fontFamily: "Open sans" }}
                         onClick={handleOnCreateBttn}>
                         Create a Jedi
                     </Button>

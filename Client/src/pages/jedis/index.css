@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .Container {
     width: 85vw;
     height: 55vh;
@@ -27,7 +31,12 @@
     display: flex;
     margin: 1vh;
     margin-bottom: 0;
-    color: #241e1e;
+    text-shadow: 0 0 5px #e0ddd7,
+        0 0 15px #3d114b,
+        0 0 20px #9e499bca,
+        0 0 10px #733d7bc7,
+        0 0 90px #e094f7d0;
+    color: #ececea;
     font-family: 'Open sans';
     padding: 4px;
     padding-left: 1vw;
@@ -58,4 +67,15 @@
 
 .ListItemsHeader>p:nth-child(5) {
     justify-content: right;
+}
+
+.jediTitle {
+    text-align: center;
+    text-shadow: 0 0 5px #e0ddd7,
+        0 0 15px #3d114b,
+        0 0 20px #9e499bca,
+        0 0 10px #733d7bc7,
+        0 0 90px #e094f7d0;
+    color: #ececea;
+    margin-bottom: 1rem;
 }

@@ -66,7 +66,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 500px;
+    height: 580px;
     background: transparent;
     border: 5px solid #fff6a9;
     box-shadow: 0 0 20px #fff6a9, inset 0 0 20px;
@@ -131,6 +131,7 @@ button {
     font-size: 1em;
     color: #fff;
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 .WrapperFormSignIn button:hover {
