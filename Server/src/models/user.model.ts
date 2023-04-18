@@ -53,7 +53,7 @@ User.init(
         lightSaberColor: {
             type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: "Blue"
+            defaultValue: "blue"
         },
         isApprentice: {
             type: DataTypes.BOOLEAN,
