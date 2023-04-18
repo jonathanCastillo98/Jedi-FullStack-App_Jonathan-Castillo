@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react';
 type Props = {
   isModalActive: boolean,
   handleOnClick: (e: any) => void
+  setIsModalActive: React.Dispatch<React.SetStateAction<boolean>>
+  onRefresh: () => void
 }
 
 const style = {
@@ -30,7 +32,7 @@ const style = {
   pb: 3,
 };
 
-const ModalLocal = ({ isModalActive, handleOnClick }: Props) => {
+const ModalCreate = ({ isModalActive, handleOnClick, setIsModalActive, onRefresh }: Props) => {
 
   const [inputs, setInputs] = useState({
     name: '',
@@ -58,8 +60,8 @@ const ModalLocal = ({ isModalActive, handleOnClick }: Props) => {
           }
         });
 
-        const res = await req.json()
-        console.log(res)
+        const res = await req.json();
+        onRefresh();
       } catch (error) {
         console.error(error)
       }
@@ -82,7 +84,7 @@ const ModalLocal = ({ isModalActive, handleOnClick }: Props) => {
       isApprentice: e.isApprentice
     })
 
-
+    setIsModalActive(false)
   };
 
   return (
@@ -140,4 +142,4 @@ const ModalLocal = ({ isModalActive, handleOnClick }: Props) => {
   );
 }
 
-export default ModalLocal;
+export default ModalCreate;

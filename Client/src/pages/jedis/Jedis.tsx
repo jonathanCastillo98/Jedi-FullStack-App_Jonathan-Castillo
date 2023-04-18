@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import JediCard from "./components/JediCard/JediCard";
-import { ModalLocal } from "../../components/modal";
 
 import Button from '@mui/material/Button';
+import { ModalCreate } from "../../components/modalCreate";
 
 
 const Jedis = () => {
@@ -10,15 +10,22 @@ const Jedis = () => {
     const [jedisList, setJedisList] = useState<any>();
     const [isModalActive, setIsModalActive] = useState(false);
 
-    useEffect(() => {
-        const getJedisList = async () => {
-            const req = await fetch('http://localhost:3000/api/v1/Jedis/');
-            const res = await req.json();
-            setJedisList(res.success)
-            console.log(res.success)
-        }
-        getJedisList()
+    const getJedisList = async () => {
+        const req = await fetch('http://localhost:3000/api/v1/Jedis/');
+        const res = await req.json();
+        setJedisList(res.success)
+        console.log(res.success)
+    }
+
+    const getList = useCallback(() => {
+        getJedisList().catch(console.error);
     }, [])
+
+
+    useEffect(() => {
+
+        getList()
+    }, [getList])
 
     const jediList = jedisList?.map((jedi: any) =>
         <JediCard
@@ -46,7 +53,7 @@ const Jedis = () => {
                 {jediList}
             </div>
             <Button onClick={handleOnCreateBttn} style={{ color: "black", border: "1px solid black", width: "30vw" }}>Create a Jedi</Button>
-            <ModalLocal isModalActive={isModalActive} handleOnClick={handleOnClose} />
+            <ModalCreate isModalActive={isModalActive} handleOnClick={handleOnClose} setIsModalActive={setIsModalActive} onRefresh={getList} />
 
         </>
     )
