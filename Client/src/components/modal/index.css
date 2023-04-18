@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.services__modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff6a9;
+    cursor: pointer;
+
+}
+
+label {
+    color: white;
+}
+
+.alert {
+    color: #fff6a9;
+}
+
+.selector {
+    width: 100%;
+    height: 30px;
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    transform: scale(0.5);
+
+}
+
+.services__modal-title {
+    text-align: center;
+    color: #fff6a9;
+    text-shadow: 0 0 20px #fff6a9, inset 0 0 20px;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.WrapperFormSignIn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 5px solid #fff6a9;
+    box-shadow: 0 0 20px #fff6a9, inset 0 0 20px;
+    border-radius: 10px;
+}
+
+.WrapperFormSignIn h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #fff6a9;
+}
+
+.Input-boxSignIn {
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+
+.Input-boxSignIn input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #333;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 10px 0 35px;
+}
+
+.Input-boxSignIn input:focus-within,
+.Input-boxSignIn input:hover {
+    border: 2px solid #fff6a9;
+    box-shadow: 0 0 20px #fff6a9, inset 0 0 20px #fff6a9;
+}
+
+.WrapperFormSignIn .Input-boxSignIn:hover {
+    color: #fff6a9;
+}
+
+.Input-boxSignIn input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Input-boxSignIn .IconSignIn {
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 55px;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.WrapperFormSignIn button:hover {
+    background: #fff6a9;
+    color: #000;
+    box-shadow: 0 0 20px #fff6a9;
+}
+
+
+
+.Register-linkSignIn p {
+    color: #fff;
+}
+
+.Register-linkSignIn p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Register-linkSignIn p a:hover {
+    text-decoration: underline;
+}
+
+.WrapperFormSignIn:hover .Register-linkSignIn p a {
+    color: #fff6a9;
+}
+
+/* Breakpoints */
+
+/* Medium devices */
+@media screen and (max-width: 768px) {
+    .WrapperFormSignIn {
+        width: 300px;
+    }
+
+    .Input-boxSignIn {
+        width: 250px;
+    }
+
+    .Input-boxSignIn input {
+        height: 40px;
+    }
+}
+
+
+/* Small devices */
+@media screen and (max-width: 430px) {
+    .WrapperFormSignIn {
+        width: 250px;
+    }
+
+    .services__modal-title {
+        padding: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .Input-boxSignIn {
+        width: 200px;
+    }
+
+    .Input-boxSignIn input {
+        height: 40px;
+    }
+
+    button {
+        margin-bottom: 1rem;
+    }
+}
