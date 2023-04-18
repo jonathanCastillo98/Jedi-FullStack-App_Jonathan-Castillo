@@ -12,8 +12,10 @@ const jediController = {
             return res.status(400).send({ error: 'The name field is mandatory!' });
         }
 
-        if (!saberColors.includes(lightSaberColor)) {
-            return res.status(400).send({ error: 'You must choose a valid color JEDI!' });
+        if (lightSaberColor) {
+            if (!saberColors.includes(lightSaberColor)) {
+                return res.status(400).send({ error: 'You must choose a valid color JEDI!' });
+            }
         }
 
         if (battleStyle < 1 || battleStyle > 7) {
